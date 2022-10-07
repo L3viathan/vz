@@ -13,7 +13,7 @@ def parse_host(ctx, opt, val):
     for number in numbers:
         yield f"http://192.168.178.{number}/relay/0?turn={{}}".format
 
-host_arg = click.argument("host", callback=parse_host)
+host_arg = click.argument("hosts", callback=parse_host)
 
 @cli.command()
 @host_arg
